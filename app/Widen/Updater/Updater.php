@@ -1,0 +1,28 @@
+<?php
+
+namespace MUONLINECORE\App\Widen\Updater;
+
+use MUONLINECORE\App\Widen\Traits\InstancesTrait;
+use WPSPCORE\App\Updater\BaseUpdater;
+
+/**
+ * @property self|null $instance
+ */
+class Updater extends BaseUpdater {
+
+	use InstancesTrait;
+
+	public $sslVerify            = false;
+//	public $checkForUpdatesLabel = null;
+//	public $packageUrl           = null;
+
+	/*
+	 *
+	 */
+
+	public function customProperties() {
+//		$this->checkForUpdatesLabel = class_exists('\WPSPCORE\Translation\Translator') ? Funcs::trans('messages.check_for_updates') : Funcs::trans('Check for updates', true);
+//		$this->packageUrl           = Funcs::config('updater.package_url') ?: Funcs::instance()->_getPublicUrl() . '/plugin.json';
+	}
+
+}

@@ -1,0 +1,146 @@
+{
+	"$schema": "https://laravel-ide.com/schema/laravel-ide-v2.json",
+	"completions": [
+		{
+			"complete": "routeName",
+			"condition": [
+				{
+					"classFqn": ["\\MUONLINECORE\\Funcs"],
+					"methodNames": ["route"],
+					"parameters": [2]
+				},
+				{
+					"functionNames": ["muoc_route"],
+					"parameters": [2]
+				}
+			]
+		},
+		{
+			"complete": "viewName",
+			"condition": [
+				{
+					"classFqn": ["\\MUONLINECORE\\Funcs"],
+					"methodNames": ["view"],
+					"parameters": [1]
+				},
+				{
+					"classFqn": ["\\MUONLINECORE\\Funcs"],
+					"methodNames": ["viewInject"],
+					"parameters": [1]
+				},
+				{
+					"classFqn": ["\\WPSPCORE\\Funcs"],
+					"methodNames": ["_view"],
+					"parameters": [1]
+				},
+				{
+					"classFqn": ["\\WPSPCORE\\Funcs"],
+					"methodNames": ["_viewInject"],
+					"parameters": [1]
+				},
+				{
+					"functionNames": ["muoc_view"],
+					"parameters": [1]
+				},
+				{
+					"functionNames": ["muoc_view_inject"],
+					"parameters": [1]
+				}
+			]
+		},
+		{
+			"complete": "assetPath",
+			"condition": [
+				{
+					"classFqn": ["\\MUONLINECORE\\Funcs"],
+					"methodNames": ["asset"],
+					"parameters": [1]
+				},
+				{
+					"functionNames": ["muoc_asset"],
+					"parameters": [1]
+				}
+			]
+		},
+		{
+			"complete": "configKey",
+			"condition": [
+				{
+					"classFqn": ["\\MUONLINECORE\\Funcs"],
+					"methodNames": ["config"],
+					"parameters": [1]
+				},
+				{
+					"classFqn": ["\\WPSPCORE\\Funcs"],
+					"methodNames": ["_config"],
+					"parameters": [1]
+				},
+				{
+					"functionNames": ["muoc_config"],
+					"parameters": [1]
+				}
+			]
+		},
+		{
+			"complete": "translationKey",
+			"condition": [
+				{
+					"classFqn": ["\\MUONLINECORE\\Funcs"],
+					"methodNames": ["trans"],
+					"parameters": [1]
+				},
+				{
+					"classFqn": ["\\WPSPCORE\\Funcs"],
+					"methodNames": ["_trans"],
+					"parameters": [1]
+				},
+				{
+					"functionNames": ["muoc_trans"],
+					"parameters": [1]
+				}
+			]
+		},
+		{
+			"complete": "environmentVariable",
+			"condition": [
+				{
+					"classFqn": ["\\MUONLINECORE\\Funcs"],
+					"methodNames": ["env"],
+					"parameters": [1]
+				},
+				{
+					"functionNames": ["muoc_env"],
+					"parameters": [1]
+				}
+			]
+		},
+		{
+			"complete": "validationRule",
+			"condition": [
+				{
+					"classFqn": ["\\MUONLINECORE\\Funcs"],
+					"methodNames": ["validate"],
+					"parameters": [2]
+				},
+				{
+					"functionNames": ["muoc_validate"],
+					"parameters": [2]
+				}
+			]
+		},
+		{
+			"complete": "validationRules",
+			"condition": [
+				{
+					"classFqn": ["\\MUONLINECORE\\Funcs"],
+					"methodNames": ["validate"],
+					"parameters": [2]
+				},
+				{
+					"functionNames": ["muoc_validate"],
+					"parameters": [2]
+				}
+			]
+		}
+	]
+}

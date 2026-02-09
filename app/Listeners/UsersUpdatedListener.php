@@ -1,0 +1,47 @@
+<?php
+
+namespace MUONLINECORE\App\Listeners;
+
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\Middleware\RateLimited;
+use MUONLINECORE\App\Events\UsersUpdatedEvent;
+use MUONLINECORE\App\Jobs\AdminSendEmailJob;
+use MUONLINECORE\App\Mail\TestMail;
+use MUONLINECORE\App\Models\UsersModel;
+use MUONLINECORE\Funcs;
+
+class UsersUpdatedListener implements ShouldQueue {
+
+	/**
+	 * The name of the queue the job should be sent to.
+	 */
+	public $queue = 'event';
+
+	/**
+	 * Create the event listener.
+	 */
+	public function __construct(UsersModel $user) {
+		//
+	}
+
+	/**
+	 * Handle the event.
+	 */
+	public function handle(UsersUpdatedEvent $event) {
+		// Send email sử dụng Job.
+		AdminSendEmailJob::dispatch('khanhpkvn@gmail.com', new TestMail('Đã cập nhật user: ' . $event->user->name ?? 'N/A'))->onQueue('emails');
+
+		// Chạy queue thì bắn notice ra frontend làm sao đc nữaaa.
+//		Funcs::notice('UsersUpdatedListener fired! in: ' . __FILE__, 'info', true);
+	}
+
+	/**
+	 * Determine whether the listener should be queued.\
+	 * Tùy biến thêm logic queue ở đây, khi nào thì Event listener này chạy queue?\
+	 * Khi nào thì chạy ngay lập tức mà không cần đưa vào queue?
+	 */
+	public function shouldQueue() {
+		return true;
+	}
+
+}

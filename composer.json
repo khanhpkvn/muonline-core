@@ -1,0 +1,88 @@
+{
+	"name": "oceancodex/wpsp",
+	"version": "12.0",
+	"description": "WordPress Starter Plugin",
+	"keywords": [
+		"wordpress plugin",
+		"wordpress starter plugin",
+		"starter plugin",
+		"starter",
+		"wordpress",
+		"plugin",
+		"oceancodex",
+		"wpsp",
+		"wordpress framework",
+		"wordpress plugin framework"
+	],
+	"license": "MIT",
+	"require": {
+		"php": "^8.2",
+
+		"ext-intl": "*",
+		"ext-json": "*",
+		"ext-mbstring": "*",
+		"ext-pdo": "*",
+		"ext-readline": "*",
+
+		"oceancodex/wpsp-core": "^12.0"
+	},
+	"require-dev": {
+		"fakerphp/faker": "^1.23",
+		"laravel/pail": "^1.2.2",
+		"laravel/pint": "^1.24",
+		"laravel/sail": "^1.41",
+		"mockery/mockery": "^1.6",
+		"nunomaduro/collision": "^8.6",
+		"phpunit/phpunit": "^11.5.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"MUONLINECORE\\": "",
+			"MUONLINECORE\\App\\": "app/",
+			"MUONLINECORE\\Database\\Factories\\": "database/factories/",
+			"MUONLINECORE\\Database\\Migrations\\": "database/migrations/",
+			"MUONLINECORE\\Database\\Seeders\\": "database/seeders/"
+		},
+		"files": [
+			"app/Helpers/MUOC_Helpers_1770633315.php"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"MUONLINECORE\\Tests\\": "tests/"
+		}
+	},
+	"authors": [
+		{
+			"name": "OceanCodex",
+			"email": "contact@oceancodex.com"
+		}
+	],
+	"scripts": {
+		"dev": [],
+		"test": [],
+		"setup": [],
+		"post-install-cmd": [
+			"@php -r \"@unlink('bootstrap/cache/services.php'); @unlink('bootstrap/cache/packages.php');\""
+		],
+		"post-update-cmd": [
+			"@php -r \"@unlink('bootstrap/cache/services.php'); @unlink('bootstrap/cache/packages.php');\""
+		],
+		"post-autoload-dump": [],
+		"post-root-package-install": [],
+		"post-create-project-cmd": [],
+		"pre-package-uninstall": []
+	},
+	"config": {
+		"sort-packages": true,
+		"optimize-autoloader": true,
+		"preferred-install": "dist",
+		"allow-plugins": {
+			"pestphp/pest-plugin": true,
+			"php-http/discovery": true
+		},
+		"autoloader-suffix": "_muoc_1770633315"
+	},
+	"minimum-stability": "stable",
+	"prefer-stable": true
+}
