@@ -33,7 +33,7 @@ class muoc_top_players extends BaseShortcode {
 		        Character.cLevel + ISNULL(MasterSkillTree.MasterLevel, 0) as level
 		    ')
 			->orderByDesc('level')
-			->take(5)
+			->take(12)
 			->get();
 
 		$view = Funcs::view('shortcodes.muoc_top_players', compact('characters'));
