@@ -121,6 +121,6 @@ switch ($checkDatabase['type'] ?? null) {
     muoc_localize = {
         "ajax_url": "<?php echo admin_url('admin-ajax.php'); ?>",
         "nonce": "<?php echo wp_create_nonce(muoc_config('app.short_name')) ?>",
-        "public_url": "<?php \WPSP\Funcs::instance()->_getPublicUrl() ?>"
+        "public_url": "<?php \MUONLINECORE\Funcs::instance()->_getPublicUrl() ?>"
     };
 </script>

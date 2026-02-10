@@ -11,7 +11,7 @@ class NavLocations {
 	use NavLocationsRouteTrait;
 
 	public function nav_locations() {
-		Route::nav_location('nav_primary', [nav_primary::class]);
+//		Route::nav_location('nav_primary', [nav_primary::class]);
 	}
 
 	/*

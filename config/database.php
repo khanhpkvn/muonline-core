@@ -35,6 +35,18 @@ return [
     */
 
 	'connections' => [
+		'mu_server' => [
+			'driver'                   => 'sqlsrv',
+			'host'                     => env('MUOC_DB_MUSERVER_HOST'),
+			'port'                     => env('MUOC_DB_MUSERVER_PORT'),
+			'database'                 => env('MUOC_DB_MUSERVER_DATABASE'),
+			'username'                 => env('MUOC_DB_MUSERVER_USERNAME'),
+			'password'                 => env('MUOC_DB_MUSERVER_PASSWORD'),
+			'charset'                  => 'utf8',
+			'prefix'                   => '',
+			'encrypt'                  => env('MUOC_DB_MUSERVER_ENCRYPT', 'yes'),
+			'trust_server_certificate' => env('MUOC_DB_MUSERVER_TRUST_SERVER_CERTIFICATE', true),
+		],
 
 		'wp' => [
 			'driver'         => 'mariadb',
@@ -154,8 +166,8 @@ return [
 			'charset'        => env('MUONLINECORE_DB_CHARSET', 'utf8'),
 			'prefix'         => '',
 			'prefix_indexes' => true,
-			// 'encrypt' => env('MUONLINECORE_DB_ENCRYPT', 'yes'),
-			// 'trust_server_certificate' => env('MUONLINECORE_DB_TRUST_SERVER_CERTIFICATE', 'false'),
+//			 'encrypt' => env('MUONLINECORE_DB_ENCRYPT', 'yes'),
+//			 'trust_server_certificate' => env('MUONLINECORE_DB_TRUST_SERVER_CERTIFICATE', 'false'),
 		],
 
 	],

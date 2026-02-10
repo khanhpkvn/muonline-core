@@ -11,7 +11,7 @@ class TaxonomyColumns {
 	use TaxonomyColumnsRouteTrait;
 
 	public function taxonomy_columns() {
-		Route::column('custom_column', [custom_column::class, 'index']);
+//		Route::column('custom_column', [custom_column::class, 'index']);
 	}
 
 	/*

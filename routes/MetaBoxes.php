@@ -15,7 +15,7 @@ class MetaBoxes {
 	 */
 
 	public function meta_boxes() {
-		Route::meta_box('wpsp_shortcode', [wpsp_content::class, 'index']);
+//		Route::meta_box('wpsp_shortcode', [wpsp_content::class, 'index']);
 	}
 
 	/*

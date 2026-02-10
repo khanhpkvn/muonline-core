@@ -15,7 +15,7 @@ class Schedules {
 	 */
 
 	public function schedules() {
-		Route::schedule('wpsp_check_license', [CheckLicenseSchedule::class, 'run'], ['interval' => 'every_minute']);
+//		Route::schedule('wpsp_check_license', [CheckLicenseSchedule::class, 'run'], ['interval' => 'every_minute']);
 	}
 
 	/*

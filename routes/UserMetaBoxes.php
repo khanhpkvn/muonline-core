@@ -15,7 +15,7 @@ class UserMetaBoxes {
 	 */
 
 	public function user_meta_boxes() {
-		Route::user_meta_box('custom_user_meta_box', [custom_user_meta_box::class, 'index']);
+//		Route::user_meta_box('custom_user_meta_box', [custom_user_meta_box::class, 'index']);
 	}
 
 	/*
