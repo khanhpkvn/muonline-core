@@ -19,6 +19,7 @@ class Actions {
 //		Route::action('wp_head', [PagesController::class, 'index']);
 //		Route::action('admin_enqueue_scripts', [AssetsController::class, 'backend']);
 //		Route::action('current_screen', [PagesController::class, 'edit_user_screen']);
+		Route::action('wp_enqueue_scripts', [AssetsController::class, 'frontend']);
 	}
 
 }

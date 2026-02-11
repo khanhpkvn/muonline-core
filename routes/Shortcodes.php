@@ -8,12 +8,16 @@ use MUONLINECORE\App\WordPress\Shortcodes\rewrite_front_page_content;
 use MUONLINECORE\App\WordPress\Shortcodes\wpsp_content;
 use WPSPCORE\App\Routes\Shortcodes\ShortcodesRouteTrait;
 use MUONLINECORE\App\WordPress\Shortcodes\muoc_top_players;
+use MUONLINECORE\App\WordPress\Shortcodes\muoc_top_guilds;
+use MUONLINECORE\App\WordPress\Shortcodes\muoc_list_posts;
 
 class Shortcodes {
 
 	use ShortcodesRouteTrait;
 
 	public function shortcodes() {
+        Route::shortcode('muoc_list_posts', [muoc_list_posts::class, 'index']);
+        Route::shortcode('muoc_top_guilds', [muoc_top_guilds::class, 'index']);
         Route::shortcode('muoc_top_players', [muoc_top_players::class, 'index']);
 //		Route::shortcode('wpsp_content', [wpsp_content::class, 'index']);
 //		Route::shortcode('rewrite_front_page_content', [rewrite_front_page_content::class, 'index']);
