@@ -1,0 +1,35 @@
+.sparks {
+	position: absolute;
+	background-repeat: no-repeat;
+
+	&-sparks {
+		left: 45%;
+		position: absolute;
+		bottom: -100%;
+	}
+
+	&-1 { @include spark("sparks-1.png", 117px, 136px, sparks-1, 0s); }
+	&-2 { @include spark("sparks-2.png", 219px, 176px, sparks-2, .5s); }
+	&-3 { @include spark("sparks-3.png", 438px, 281px, sparks-3, 1s); }
+}
+
+@keyframes sparks-1 {
+	0%   { right: 200px; bottom: 10px; opacity: 0; }
+	33%  { right: 210px; bottom: 20px; opacity: .5; transform: scale(1.1); }
+	70%  { right: 220px; bottom: 30px; opacity: 1; }
+	100% { right: 230px; bottom: 40px; opacity: 0; }
+}
+
+@keyframes sparks-2 {
+	0%   { right: 210px; bottom: 40px; opacity: 0; }
+	33%  { right: 220px; bottom: 50px; opacity: .5; transform: scale(1.1); }
+	70%  { right: 230px; bottom: 60px; opacity: 1; }
+	100% { right: 240px; bottom: 70px; opacity: 0; }
+}
+
+@keyframes sparks-3 {
+	0%   { right: 120px; bottom: 30px; opacity: 0; }
+	33%  { right: 140px; bottom: 50px; opacity: .5; transform: scale(1.1); }
+	70%  { right: 160px; bottom: 70px; opacity: 1; }
+	100% { right: 180px; bottom: 90px; opacity: 0; }
+}

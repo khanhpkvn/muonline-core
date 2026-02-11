@@ -1,0 +1,109 @@
+/** Global */
+
+body {
+	width: 100%;
+	background: url("#{$asset-base}/fon-bg-top-2.jpg") center top no-repeat,
+	url("#{$asset-base}/fon-bg-bottom.jpg") center bottom no-repeat;
+	background-color: #100c0c;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+.button {
+	&.is-shade {
+		@include button-bg("bg-button-1.jpg");
+	}
+
+	&.is-bevel {
+		@include button-bg("bg-button-sign.png");
+	}
+
+	&:hover {
+		filter: brightness(110%);
+	}
+}
+
+input[type=email]:focus, input[type=number]:focus, input[type=password]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, select:focus, textarea:focus {
+	box-shadow: 0 0 5px #45342d!important;
+	color: $color-link-hover!important;
+}
+
+.select-resize-ghost, .select2-container .select2-choice, .select2-container .select2-selection, input[type=date], input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
+	background-color: #140f10!important;
+	border: 1px solid #2f2325!important;
+	color: $color-link-hover!important;
+}
+
+/** Display: none */
+
+.blog-posts-no-thumbnail .box-image, .is-divider, #logo {
+	display: none!important;
+}
+
+/** Components */
+
+.toplist {
+	.toplist-item {
+		border-bottom: 1px solid transparent;
+		transition: all .2s;
+
+		&:hover {
+			background-color: #342b29;
+			border-bottom: 1px solid #5c432b;
+			box-shadow: 0 8px 10px -3px rgba(0, 0, 0, .45);
+			color: $color-link;
+			position: relative;
+			scale: 1.048;
+		}
+	}
+}
+
+.toTop-fon {
+	display: flex;
+	height: 46px;
+	justify-content: center;
+	align-items: center;
+	background: url("#{$asset-base}/fon-totop.png") no-repeat;
+	background-size: 100%;
+
+	.toTop {
+		width: 36px;
+		height: 36px;
+		display: flex;
+		cursor: pointer;
+		background: url("#{$asset-base}/fon-circle.png") no-repeat;
+
+		&:hover {
+			filter: brightness(140%);
+		}
+	}
+}
+
+.download-block {
+	&:hover {
+		filter: brightness(110%);
+	}
+}
+
+.blog-posts-push-gradient {
+	.post-item {
+		.box-text {
+			background-image: linear-gradient(to right, #c6a795, #beb9b5);
+			padding: 5px 15px 2px;
+			border-radius: 0 100px 100px 0;
+			width: auto;
+			bottom: 10px;
+
+			.post-title a {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				line-height: 1;
+				margin-bottom: 0;
+				max-width: 100%;
+				color: #111;
+				text-shadow: none;
+			}
+		}
+	}
+}

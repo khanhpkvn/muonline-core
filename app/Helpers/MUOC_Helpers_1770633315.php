@@ -194,6 +194,11 @@ if (!function_exists('muoc_guild_logo')) {
 		return $it;
 	}
 }
+if (!function_exists('muoc_date_format')) {
+	function muoc_date_format($date, $toFormat = 'd/m/Y', $fromFormat = null) {
+		return date($toFormat, strtotime($date));
+	}
+}
 
 /*
  *

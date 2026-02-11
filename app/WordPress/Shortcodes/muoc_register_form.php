@@ -6,7 +6,7 @@ use MUONLINECORE\App\Widen\Traits\InstancesTrait;
 use MUONLINECORE\Funcs;
 use WPSPCORE\App\WordPress\Shortcodes\BaseShortcode;
 
-class muoc_list_posts extends BaseShortcode {
+class muoc_register_form extends BaseShortcode {
 
 	use InstancesTrait;
 
@@ -17,9 +17,7 @@ class muoc_list_posts extends BaseShortcode {
 	 */
 
 	public function index($atts, $content, $tag) {
-		$posts = get_posts(['numberposts' => 5]);
-		$view = Funcs::view('shortcodes.muoc_list_posts', compact('posts'));
-		return do_shortcode($view);
+		return Funcs::view('shortcodes.muoc_register_form')->render();
 	}
 
 	/*

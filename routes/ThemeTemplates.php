@@ -9,6 +9,7 @@ use MUONLINECORE\App\WordPress\ThemeTemplates\wpsp_right_content;
 use MUONLINECORE\App\WordPress\ThemeTemplates\wpsp_without_header_footer;
 use MUONLINECORE\App\WordPress\ThemeTemplates\wpsp_without_title;
 use WPSPCORE\App\Routes\ThemeTemplates\ThemeTemplatesRouteTrait;
+use MUONLINECORE\App\WordPress\ThemeTemplates\page_full_width_global_header;
 
 class ThemeTemplates {
 
@@ -19,6 +20,7 @@ class ThemeTemplates {
 	 */
 
 	public function theme_templates() {
+		Route::theme_template('page_full_width_global_header', [page_full_width_global_header::class]);
 //		Route::theme_template('wpsp-without-title', [wpsp_without_title::class]);
 //		Route::theme_template('wpsp-center-content', [wpsp_center_content::class]);
 //		Route::theme_template('wpsp-without-header-footer', [wpsp_without_header_footer::class]);

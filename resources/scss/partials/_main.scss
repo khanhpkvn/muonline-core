@@ -1,0 +1,9 @@
+.col.main-content > .col-inner,
+.main-content > .main-content-inner {
+	padding: 25px;
+	background:
+			url("#{$asset-base}/fon-page-top.jpg") center top no-repeat,
+			url("#{$asset-base}/fon-page-bottom.jpg") center bottom no-repeat;
+	background-color: #211715;
+	background-size: contain;
+}

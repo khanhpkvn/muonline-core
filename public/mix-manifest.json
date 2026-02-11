@@ -4,5 +4,6 @@
     "/ts/web/admin-pages/admin.min.js": "/ts/web/admin-pages/admin.min.js",
     "/ts/web/admin-pages/wpsp/Database.min.js": "/ts/web/admin-pages/wpsp/Database.min.js",
     "/css/app.min.css": "/css/app.min.css",
-    "/scss/app.min.css": "/scss/app.min.css"
+    "/scss/app.min.css": "/scss/app.min.css",
+    "/scss/frontend.min.css": "/scss/frontend.min.css"
 }
