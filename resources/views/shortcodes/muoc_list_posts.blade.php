@@ -1,5 +1,5 @@
-<div class="row large-columns-1 medium-columns-1 small-columns-1 row-small mt">
-    <div class="col post-item">
+<div class="toplist-beauty row large-columns-1 medium-columns-1 small-columns-1 row-small mt">
+    <div class="post-item top-list-item col py-2">
         <div class="col-inner">
             <div class="d-flex align-middle">
                 <a href="#" class="plain is-large full-width no-margin">
@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <div class="col post-item">
+    <div class="post-item top-list-item col py-2">
         <div class="col-inner">
             <div class="d-flex align-middle">
                 <a href="#" class="plain is-large full-width no-margin">Hello world!</a>
