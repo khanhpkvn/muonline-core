@@ -58,27 +58,6 @@ input[type=email]:focus, input[type=number]:focus, input[type=password]:focus, i
 	}
 }
 
-.toTop-fon {
-	display: flex;
-	height: 46px;
-	justify-content: center;
-	align-items: center;
-	background: url("#{$asset-base}/fon-totop.png") no-repeat;
-	background-size: 100%;
-
-	.toTop {
-		width: 36px;
-		height: 36px;
-		display: flex;
-		cursor: pointer;
-		background: url("#{$asset-base}/fon-circle.png") no-repeat;
-
-		&:hover {
-			filter: brightness(140%);
-		}
-	}
-}
-
 .download-block {
 	&:hover {
 		filter: brightness(110%);

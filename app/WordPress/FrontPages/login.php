@@ -27,7 +27,7 @@ class login extends BaseFrontPage {
 		}
 		elseif ($action == 'logout') {
 			Funcs::auth('mu_server')->logout();
-			return back();
+			return back()->with(['success' => 'logout']);
 		}
 		return back();
 	}
@@ -62,7 +62,7 @@ class login extends BaseFrontPage {
 			$user = MUServerMEMB_INFO::where('memb___id', $request->username)->first();
 
 			if (!$user) {
-				return back()->withErrors(['username' => 'Tài khoản không tồn tại. Vui lòng thử lại!']);
+				return back()->withInput()->withErrors(['username' => 'Sai tài khoản hoặc mật khẩu. Vui lòng thử lại!']);
 			}
 
 			if ($user->memb__pwd !== $request->password) {
@@ -74,12 +74,12 @@ class login extends BaseFrontPage {
 				'memb___id' => $request->username,
 				'password' => $request->password,
 			])) {
-				return back()->withErrors([
+				return back()->withInput()->withErrors([
 					'username' => 'Sai tài khoản hoặc mật khẩu. Vui lòng thử lại!',
 				]);
 			}
 
-			return back()->with(['success', 'Đã đăng nhập thành công!']);
+			return back()->with(['success' => 'login']);
 		}
 		catch (\Exception $e) {
 			return back()->withErrors(['error' => 'Đã có lỗi xảy ra. Vui lòng thử lại!']);

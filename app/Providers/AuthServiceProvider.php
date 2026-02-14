@@ -3,9 +3,7 @@
 namespace MUONLINECORE\App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-use MUONLINECORE\App\Models\UsersModel;
-use MUONLINECORE\App\Policies\UsersPolicy;
-use MUONLINECORE\Funcs;
+use MUONLINECORE\App\Widen\Support\Facades\Auth;
 
 class AuthServiceProvider extends ServiceProvider {
 
@@ -28,7 +26,7 @@ class AuthServiceProvider extends ServiceProvider {
 	 */
 	public function boot() {
 //		$this->registerPolicies();
-		Funcs::app('auth')->provider('muserver_user_provider', function ($app, array $config) {
+		Auth::provider('muserver_user_provider', function ($app, array $config) {
 			return new MUServerUserProvider($app['hash'], $config['model']);
 		});
 	}

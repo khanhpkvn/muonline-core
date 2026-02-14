@@ -1,5 +1,6 @@
 @mixin spark($img, $w, $h, $anim, $delay) {
 	background-image: url("#{$asset-base}/#{$img}");
+	background-size: 100%;
 	width: $w;
 	height: $h;
 	animation: $anim 1.5s infinite linear;
@@ -8,13 +9,13 @@
 }
 
 @mixin button-bg($file) {
-	background-size: cover;
 	background: transparent url("#{$asset-base}/#{$file}") no-repeat center bottom;
 	color: $color-link;
 	border: none;
 	position: relative;
 	z-index: 1;
 	text-align: center;
+	background-size: 100%;
 
 	&:after {
 		display: none;

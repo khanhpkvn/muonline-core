@@ -2,8 +2,8 @@
 
 namespace MUONLINECORE\App\Providers;
 
-use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Contracts\Auth\UserProvider;
 
 class MUServerUserProvider implements UserProvider {
 
@@ -13,7 +13,7 @@ class MUServerUserProvider implements UserProvider {
 	 *
 	 */
 
-	public function __construct($hasher, $model) {
+	public function __construct($hasher = null, $model = null) {
 		$this->model = $model;
 	}
 

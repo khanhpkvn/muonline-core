@@ -1,0 +1,36 @@
+.toTop-fon {
+	display: flex;
+	height: 48px;
+	justify-content: center;
+	align-items: center;
+	background: url("#{$asset-base}/fon-totop.png") no-repeat;
+	background-size: 100%;
+
+	.toTop {
+		width: 36px;
+		height: 36px;
+		display: flex;
+		cursor: pointer;
+		background: url("#{$asset-base}/fon-circle.png") no-repeat;
+		background-size: 100%;
+
+		&:hover {
+			filter: brightness(140%);
+		}
+	}
+}
+
+#footer {
+	* {
+		color: var(--fs-experimental-link-color);
+	}
+
+	.footer-1, .footer-2 {
+		border: none;
+	}
+
+	.widget-title {
+		font-size: 1.6em;
+	}
+
+}

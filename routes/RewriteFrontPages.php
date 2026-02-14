@@ -10,6 +10,7 @@ use MUONLINECORE\App\WordPress\RewriteFrontPages\auth;
 use MUONLINECORE\App\WordPress\RewriteFrontPages\wpsp;
 use MUONLINECORE\App\WordPress\RewriteFrontPages\wpsp_with_template;
 use WPSPCORE\App\Routes\RewriteFrontPages\RewriteFrontPagesRouteTrait;
+use MUONLINECORE\App\WordPress\RewriteFrontPages\logout;
 
 class RewriteFrontPages {
 
@@ -20,6 +21,7 @@ class RewriteFrontPages {
 	 */
 
 	public function rewrite_front_pages() {
+		Route::get('logout\/?$', [logout::class, 'logout']);
 //		Route::name('auth.')->prefix('auth')->group(function() {
 //			Route::get('login', [auth::class, 'login'])->name('login');
 //			Route::get('register', [auth::class, 'register'])->name('register');
