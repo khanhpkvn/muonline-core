@@ -18,7 +18,7 @@ class Ajaxs {
 	 */
 
 	public function ajaxs() {
-		Route::post('register', [AjaxsController::class, 'register'], ['nopriv' => true])->name('register');
+//		Route::post('register', [AjaxsController::class, 'register'], ['nopriv' => true])->name('register');
 //		Route::get('demo_ajax_get', [AjaxsController::class, 'ajaxDemoGet'], ['nopriv' => true])->name('demo_ajax_get');
 //		Route::post('demo_ajax_post', [AjaxsController::class, 'ajaxDemoGet'], ['nopriv' => true])->name('demo_ajax_post');
 //		Route::prefix('users')->name('users.')->middleware(AuthenticationMiddleware::class)->group(function() {

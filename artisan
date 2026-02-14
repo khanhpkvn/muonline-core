@@ -8,6 +8,7 @@ use MUONLINECORE\routes\AdminPages;
 use MUONLINECORE\routes\Ajaxs;
 use MUONLINECORE\routes\Apis;
 use MUONLINECORE\routes\Filters;
+use MUONLINECORE\routes\FrontPages;
 use MUONLINECORE\routes\MetaBoxes;
 use MUONLINECORE\routes\NavLocations;
 use MUONLINECORE\routes\PostTypeColumns;
@@ -108,6 +109,7 @@ if (defined('MUOC_ACTIVE') && MUOC_ACTIVE) {
         NavLocations::class,
         UserMetaBoxes::class,
         RewriteFrontPages::class,
+        FrontPages::class,
         Actions::class,
         Filters::class,
     ] as $route) {

@@ -2,13 +2,14 @@
 
 namespace MUONLINECORE\App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class MUServerMEMB_INFO extends Model {
+class MUServerMEMB_INFO extends Authenticatable {
 
 	protected $connection = 'mu_server';
 	protected $table      = 'MEMB_INFO';
 	protected $primaryKey = 'memb_guid';
+	protected $keyType    = 'int';
 
 	protected $fillable = [
 		'memb___id',
@@ -26,5 +27,6 @@ class MUServerMEMB_INFO extends Model {
 	];
 
 	public $timestamps = false;
+	public $incrementing = false;
 
 }

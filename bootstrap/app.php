@@ -8,6 +8,7 @@ use MUONLINECORE\routes\Ajaxs;
 use MUONLINECORE\routes\Apis;
 use MUONLINECORE\routes\Blocks;
 use MUONLINECORE\routes\Filters;
+use MUONLINECORE\routes\FrontPages;
 use MUONLINECORE\routes\MetaBoxes;
 use MUONLINECORE\routes\NavLocations;
 use MUONLINECORE\routes\PostTypeColumns;
@@ -52,6 +53,7 @@ add_action('init', function() {
 		NavLocations::class,
 		UserMetaBoxes::class,
 		RewriteFrontPages::class,
+		FrontPages::class,
 		Blocks::class,
 		Actions::class,
 		Filters::class,

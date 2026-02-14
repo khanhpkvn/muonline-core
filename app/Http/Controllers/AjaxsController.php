@@ -129,37 +129,5 @@ class AjaxsController extends BaseController {
 			'message' => 'Users list retrieved',
 		]);
 	}
-	
-	public function register(RegisterRequest $request) {
-		$nonce = $request->get('_wpnonce');
-
-		if (!wp_verify_nonce($nonce, 'register')) {
-			wp_redirect('/register');
-			exit;
-		}
-
-		try {
-			$member = MUServerMEMB_INFO::query()->create([
-				'memb___id' => $request->username,
-				'memb_name' => $request->name,
-				'memb__pwd' => $request->password,
-				'mail_addr' => $request->email,
-				'sno__numb' => 0,
-				'post_code' => 1,
-				'fpas_ques' => 'question',
-				'fpas_answ' => 'answer',
-				'mail_chek' => 0,
-				'bloc_code' => 0,
-				'ctl1_code' => 0,
-				'AccountLevel' => 0,
-			]);
-			return wp_redirect('/register-success');
-		}
-		catch (\Exception $e) {
-			echo $e->getMessage();
-			return false;
-		}
-
-	}
 
 }
