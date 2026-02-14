@@ -29,4 +29,12 @@ class MUServerMEMB_INFO extends Authenticatable {
 	public $timestamps = false;
 	public $incrementing = false;
 
+	/*
+	 *
+	 */
+
+	public function getAuthPassword() {
+		return $this->memb__pwd;
+	}
+
 }

@@ -32,9 +32,10 @@ class Share extends \WPSPCORE\App\View\Share {
 	 */
 	public function share() {
 		$this->view->share([
-			'current_wp_user' => wp_get_current_user(),
-			'current_request' => $this->request,
-			'current_user'    => Auth::user(),
+			'current_wp_user'       => wp_get_current_user(),
+			'current_request'       => $this->request,
+			'current_user'          => Auth::user(),
+			'current_muserver_user' => Auth('mu_server')->user(),
 		]);
 	}
 

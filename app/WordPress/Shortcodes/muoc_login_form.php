@@ -17,7 +17,7 @@ class muoc_login_form extends BaseShortcode {
 	 */
 
 	public function index($atts, $content, $tag) {
-		return Funcs::view('shortcodes.muoc_login_form')->withErrors(['xxxxxx' => '123'])->render();
+		return Funcs::view('shortcodes.muoc_login_form')->render();
 	}
 
 	/*

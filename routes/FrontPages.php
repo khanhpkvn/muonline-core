@@ -22,7 +22,7 @@ class FrontPages {
 	 */
 
 	public function front_pages() {
-		Route::post('login\/?$', [login::class, 'login']);
+		Route::post('login\/?$', [login::class, 'submit']);
 		Route::post('register', [register::class, 'register']);
 
 //		Route::name('auth.')->prefix('auth')->group(function() {

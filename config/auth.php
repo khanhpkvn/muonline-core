@@ -14,7 +14,7 @@ return [
     */
 
 	'defaults' => [
-		'guard' => env('MUONLINECORE_AUTH_GUARD', 'web'),
+		'guard' => env('MUONLINECORE_AUTH_GUARD', 'mu_server'),
 		'passwords' => env('MUONLINECORE_AUTH_PASSWORD_BROKER', 'users'),
 	],
 
@@ -36,6 +36,10 @@ return [
     */
 
 	'guards' => [
+		'mu_server' => [
+			'driver' => 'session',
+			'provider' => 'mu_users',
+		],
 		'web' => [
 			'driver' => 'session',
 			'provider' => 'users',
@@ -60,6 +64,11 @@ return [
     */
 
 	'providers' => [
+		'mu_users' => [
+			'driver' => 'muserver_user_provider',
+			'model'  => \MUONLINECORE\App\Models\MUServerMEMB_INFO::class,
+		],
+
 		'users' => [
 			'driver' => 'eloquent',
 			'model'  => env('MUONLINECORE_AUTH_MODEL', \MUONLINECORE\App\Models\UsersModel::class),
@@ -91,6 +100,13 @@ return [
     */
 
 	'passwords' => [
+		'muserver_users' => [
+			'provider' => 'mu_users',
+			'table' => env('MUONLINECORE_AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
+			'expire' => 60,
+			'throttle' => 60,
+		],
+
 		'users' => [
 			'provider' => 'users',
 			'table' => env('MUONLINECORE_AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),

@@ -21,7 +21,23 @@ class RegisterRequest extends FormRequest {
 	 */
 	public function rules(): array {
 		return [
-			'name'  => 'required|string|max:255',
+			'full_name'  => 'required|string|max:10',
+			'username'   => 'required|string|max:10|unique:mu_server.MEMB_INFO,memb___id',
+			'email'      => 'required|string|email|unique:mu_server.MEMB_INFO,mail_addr',
+			'password'   => ['required', 'string', 'min:6', 'max:10', 'confirmed'],
+		];
+	}
+
+	/**
+	 * (Tùy chọn) Tùy chỉnh tên hiển thị cho các field.
+	 */
+	public function attributes() {
+		return [
+			'full_name'             => 'Tên',
+			'username'              => 'Tài khoản',
+			'password'              => 'Mật khẩu',
+			'email'                 => 'Email',
+			'password_confirmation' => 'Xác nhận mật khẩu',
 		];
 	}
 
@@ -29,15 +45,6 @@ class RegisterRequest extends FormRequest {
 	 * Tùy chỉnh cách phản hồi khi validate không thành công.
 	 */
 	public function failedValidation($validator) {
-//		if ($this->expectsJson()) {
-//			wp_send_json([
-//				'success' => false,
-//				'errors'  => $validator->errors()->messages(),
-//				'message' => 'Dữ liệu không hợp lệ',
-//			], 422);
-//			exit;
-//		}
-
 		$errors = $validator->errors()->all();
 		$errorList = '<ul>';
 		foreach ($errors as $error) {
@@ -55,10 +62,6 @@ class RegisterRequest extends FormRequest {
 			'status'       => 'Dữ liệu không hợp lệ',
 		]);
 		exit;
-
-//		throw new InvalidDataException($errorList);
-
-//		parent::failedValidation($validator);
 	}
 
 }
